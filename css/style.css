@@ -1,4 +1,16 @@
-/* Global config */
+/* Animations*/
+@keyframes shadow_hover {
+    from {box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);}
+    to {box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+}
+
+@keyframes shadow_escape {
+    from {box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+    to {box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);}
+}
+
+
+/* Global */
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -13,6 +25,26 @@ h1 {
 .subtitle {
     padding-top: 4px;
 }
+
+section {
+    padding: 30px;
+}
+
+.shadow_hover {
+    animation-name: shadow_escape;
+    animation-duration: 0.4s;
+}
+
+.shadow_hover:hover {
+    animation-name: shadow_hover;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+div {
+    flex-wrap: wrap;
+}
+
 
 /* Page navbar */
 .navbar {
@@ -51,11 +83,8 @@ h1 {
     border-right-width: 0px;
 }
 
-/* Home Page */
-.homepage {
-    padding: 30px;
-}
 
+/* Home Page */
 .banner {
     border: 1px solid black;
     width: 100%;
@@ -63,4 +92,36 @@ h1 {
     margin-top: 20px;
     background-image: url("https://picsum.photos/1366/578");
     background-size: cover;
+}
+
+/* HQ Pages */
+.hq_card {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    border: 0px solid black;
+    border-radius: 8px;
+    margin-right: 20px;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.hq_card > .image {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 100%;
+}
+
+.hq_card > .label {
+    margin: 18px;
+    font-size: 16px;
+}
+
+.hq_cards_cluster {
+    padding-top: 30px;
+    display: flex;
 }
