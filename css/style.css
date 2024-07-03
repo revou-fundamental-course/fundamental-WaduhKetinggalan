@@ -1,1 +1,48 @@
-/* CSS */
+/* Global */
+.circle {
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.spaced {
+    padding: 30px;
+}
+
+
+/* Page Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.navbar > a {
+    text-decoration: none;
+    color: black;
+
+    padding: 20px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    border-right: 1px solid black;
+}
+
+.navbar > .end {
+    border-width: 0px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.page_header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
