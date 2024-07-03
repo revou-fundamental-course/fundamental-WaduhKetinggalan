@@ -15,10 +15,10 @@
             <div class="logo"></div>
 
             <div class="navbutton">
-                <a href="#homepage">Home</a>
-                <a href="#profile">Our Profile</a>
-                <a href="">Portofolio</a>   
-                <a href="" class="end">Message Us</a>
+                <a href="#homepage" class="shadow_hover">Home</a>
+                <a href="#profile" class="shadow_hover">Our Profile</a>
+                <a href="" class="shadow_hover">Portofolio</a>   
+                <a href="" class="end shadow_hover">Message Us</a>
             </div>
         </nav>
     </header>
@@ -57,6 +57,47 @@
                     <div class="image"></div>
                     <div class="label">Surabaya</div>
                 </div>
+            </div>
+        </section>
+        <hr>
+
+        <!-- Message Us -->
+        <section>
+            <header>
+                <h1>Message Us (Work in progress / Belum selesai)</h1>
+            </header>
+
+            <div class="message_us_page">
+                <form class="message_form">
+                    <div class="label">
+                        <label for="name">Nama :</label>
+                        <label for="birth_date">Tanggal Lahir :</label>
+                        <label for="gender">Jenis Kelamin :</label>
+                        <label for="message">Pesan :</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="text" id="name">
+                        <input type="date" id="birth_date">
+
+                        <div class="gender_radiob">
+                            <div class="part0">
+                                <label for="male">Laki-laki</label>
+                                <input type="radio" name="gender" id="male">
+                            </div>
+                            <div class="part1">
+                                <label for="female">Perempuan</label>
+                                <input type="radio" name="gender" id="female">
+                            </div>
+                        </div>
+
+                        <textarea id="message" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <input type="submit" class="submit shadow_hover">
+                </form>
+
+                <div class="messages_box"></div>
             </div>
         </section>
     </main>

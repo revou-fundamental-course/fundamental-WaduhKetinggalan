@@ -94,6 +94,7 @@ div {
     background-size: cover;
 }
 
+
 /* HQ Pages */
 .hq_card {
     display: flex;
@@ -124,4 +125,52 @@ div {
 .hq_cards_cluster {
     padding-top: 30px;
     display: flex;
+}
+
+
+/* Message Us Page*/
+.message_us_page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.message_form {
+    display: flex;
+    height: 300px;
+    width: 49%
+}
+
+.message_form > .input > input {
+    height: 30px;
+    width: 100%;
+}
+
+.message_form > div {
+    width: 100%;
+}
+
+.message_form > .label, .message_form > .input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.messages_box {
+    width: 50%;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.gender_radiob {
+    display: flex;
+    margin: 0px;
+}
+
+.gender_radiob > .part0, .gender_radiob > .part1 {
+    margin-right: 20px;
+}
+
+.gender_radiob > div > label {
+    font-weight: bold;
 }
