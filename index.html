@@ -10,7 +10,7 @@
 
 <body>
     <header class="page_header">
-        <img src="https://picsum.photos/seed/200x200/200/200" class="logo circle soft_shadow">
+        <img src="https://picsum.photos/seed/200x200/200/200" alt="logo" class="logo circle soft_shadow">
 
         <nav class="navbar soft_shadow">
             <a href="">Home</a>
@@ -36,14 +36,83 @@
                 <h1>About Me</h1>
             </header>
 
-            <div class="about_me_page">
-                <div class="profile_pic"></div>
+            <div class="about_me_page medium_shadow">
+                <img class="profile_pic" src="https://placehold.co/200" alt="placeholder">
                 <div class="subtitle">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corrupti inventore asperiores omnis? Quibusdam minima, dolor aspernatur
-                        asperiores voluptate officia exercitationem pariatur magnam porro modi voluptatem blanditiis quam culpa ex!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corrupti inventore asperiores omnis? Quibusdam minima, dolor
+                        aspernatur asperiores voluptate officia exercitationem pariatur magnam porro modi voluptatem blanditiis quam culpa ex!
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <!-- My Projects -->
+        <section class="spaced">
+            <header>
+                <h1>My Projects</h1>
+            </header>
+
+            <div class="my_projects_page">
+                <a href="https://google.com" target="_blank" class="project">
+                    <div class="project_image i0"></div>
+                    <div class="project_label">
+                        <h2>Placeholder</h2>
+                    </div>
+                </a>
+
+                <a href="https://google.com" target="_blank" class="project">
+                    <div class="project_image i1"></div>
+                    <div class="project_label">
+                        <h2>Placeholder</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Message Me -->
+        <section class="spaced">
+            <header>
+                <h1>Message Me</h1>
+            </header>
+
+            <div class="message_me_page">
+                <form class="table_parent medium_shadow">
+                    <table class="form_table">
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td><input class="len he" type="text"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Tanggal Lahir </td>
+                            <td>:</td>
+                            <td><input class="len he" type="date"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Jenis Kelamin </td>
+                            <td>:</td>
+                            <td>
+                                <label for="male">Laki-laki</label>
+                                <input type="radio" name="gender" id="male">
+                                <label for="female">Perempuan</label>
+                                <input type="radio" name="gender" id="female">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Pesan </td>
+                            <td>:</td>
+                            <td><textarea name="message" class="len" id="message" cols="30" rows="10"></textarea></td>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </table>
+
+                    <input class="submit" type="submit"></button>
+                </form>
             </div>
         </section>
     </main>
