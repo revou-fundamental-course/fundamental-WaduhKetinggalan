@@ -1,176 +1,259 @@
-/* Animations*/
-@keyframes shadow_hover {
-    from {box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);}
-    to {box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+/* Animations */
+@keyframes shadow_show {
+    from {box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6);}
+    to {box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);}
 }
 
-@keyframes shadow_escape {
-    from {box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
-    to {box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);}
+@keyframes shadow_hide {
+    from {box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);}
+    to {box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6);}
 }
 
 
 /* Global */
+.circle {
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.spaced {
+    padding: 30px;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial;
 }
 
 h1 {
-    font-weight: normal;
-    font-size: 25px;
-    padding: 0px;
+    font-weight: bolder;
+    font-size: 3em;
     margin: 0px;
 }
 
-.subtitle {
-    padding-top: 4px;
+.soft_shadow {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    padding: 30px;
-}
-
-.shadow_hover {
-    animation-name: shadow_escape;
-    animation-duration: 0.4s;
-}
-
-.shadow_hover:hover {
-    animation-name: shadow_hover;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-}
-
-div {
-    flex-wrap: wrap;
+.medium_shadow {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 
-/* Page navbar */
+/* Page Header */
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.navbar > a {
+    text-decoration: none;
+    color: black;
+
+    padding: 20px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    border-right: 1px solid black;
+}
+
+.navbar > .end {
+    border-width: 0px;
 }
 
 .logo {
-    width: 55px;
-    height: 55px;
-    border: 1px solid black;
-    margin: 1%;
-    border-radius: 100%;
-    background-image: url("https://picsum.photos/100/100");
-    background-size: cover;
+    height: 50px;
+    width: 50px;
 }
 
-.navbutton {
+.page_header {
     display: flex;
-    border: 1px solid black;
-    border-radius: 4px;
-    margin-right: 80px;
-}
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
-.navbutton > a {
-    border-right: 1px solid black;
-    padding: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: black;
-    text-decoration: none;
-}
-
-.navbutton > .end {
-    border-right-width: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 
 /* Home Page */
 .banner {
-    border: 1px solid black;
+    display: flex;
     width: 100%;
-    height: 440px;
+    height: 500px;
+    border-radius: 8px;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0), black), url("https://picsum.photos/seed/picsum/1080/1920");
+    background-size: cover;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* About Me */
+.about_me_page {
     margin-top: 20px;
-    background-image: url("https://picsum.photos/1366/578");
+    padding: 20px;
+    border-radius: 8px;
+
+    background-image: url("https://picsum.photos/seed/epicpls/1080/140");
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile_pic {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about_me_page > .subtitle {
+    display: flex;
+    height: 100px;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_me_page > .subtitle > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);;
+}
+
+
+/* My Projects */
+.my_projects_page {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-right: 30px;
+
+    animation-name: shadow_hide;
+    animation-duration: 0.5s;
+    color: black;
+    text-decoration: none;
+}
+
+.project:hover {
+    animation-name: shadow_show;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.project_image {
+    width: 100%;
+    height: 60%;
+    border-radius: 8px 8px 0px 0px;
     background-size: cover;
 }
 
-
-/* HQ Pages */
-.hq_card {
+.project_label {
     display: flex;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    border: 0px solid black;
-    border-radius: 8px;
-    margin-right: 20px;
-    padding: 15px;
-    padding-bottom: 10px;
+    justify-content: center;
 }
 
-.hq_card > .image {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: 5px;
-    border-radius: 100%;
+.i0 {
+    background-image: url("https://picsum.photos/seed/epicpls0/300/200");
 }
 
-.hq_card > .label {
-    margin: 18px;
-    font-size: 16px;
+.i1 {
+    background-image: url("https://picsum.photos/seed/epicpls1/300/200");
 }
 
-.hq_cards_cluster {
-    padding-top: 30px;
+
+/* Message Me */
+.message_me_page {
     display: flex;
+    margin-top: 20px;
+    font-size: 15px;
+    width: 100%;
 }
 
-
-/* Message Us Page*/
-.message_us_page {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+.len {
+    width: 100%;
 }
 
-.message_form {
-    display: flex;
-    height: 300px;
-    width: 49%
-}
-
-.message_form > .input > input {
+.he {
     height: 30px;
-    width: 100%;
 }
 
-.message_form > div {
+#submit {
     width: 100%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.message_form > .label, .message_form > .input {
+.table_parent {
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    width: 49%;
 }
 
-.messages_box {
-    width: 50%;
-    height: 300px;
-    border: 1px solid black;
+#regist_box {
+    display: none;
+    flex-direction: column;
+    width: 49%;
+    height: calc(30px*2 + 15.5em);
+    margin-left: 20px;
+    border-radius: 8px;
 }
 
-.gender_radiob {
-    display: flex;
-    margin: 0px;
+.sp {
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: larger;
 }
 
-.gender_radiob > .part0, .gender_radiob > .part1 {
-    margin-right: 20px;
-}
 
-.gender_radiob > div > label {
-    font-weight: bold;
+/* Responsive Layouting */
+@media only screen and (max-width:425px) {
+    /* Global */
+    h1 {font-size: 2em;}
+    h2 {font-size: 10px;}
+    p {font-size: 0.7em;}
+    .spaced {padding: 5px;}
+
+    /* Header */
+    .page_header {flex-direction: column;}
+    .navbar > a {padding-left: 5px; padding-right: 5px;}
+    .logo {margin-bottom: 5px;}
+
+    /* About Me*/
+    .about_me_page > .subtitle > p {margin-left: 2px; margin-right: 2px;}
+    .about_me_page {justify-content: space-between;}
+    
+    /* My Projects and Form */
+    .project {width: 130px; margin-right: 10px;}
+    .table_parent {width: 250px;}
+    .message_me_page {flex-direction: column;}
+    .sp {font-size: 15px;}
+    #regist_box {width: 100%; margin-left: 0px; margin-top: 20px;}
 }
