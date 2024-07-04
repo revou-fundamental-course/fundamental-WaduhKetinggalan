@@ -9,9 +9,10 @@
 
 
 <body>
+    
     <header class="page_header">
         <img src="https://picsum.photos/seed/200x200/200/200" alt="logo" class="logo circle soft_shadow">
-
+        
         <nav class="navbar soft_shadow">
             <a href="">Home</a>
             <a href="">Our Profile</a>
@@ -25,17 +26,17 @@
         <!-- Homepage -->
         <section class="spaced">
             <div class="banner">
-                <h1>Hi User, Welcome to Website</h1>
-                <span class="subtitle">[SUBTITLE]</span>
+                <h1>Hi <span id="username">User</span>, Welcome to Website</h1>
+                <span class="subtitle"></span>
             </div>
         </section>
-
+        
         <!-- About Me -->
         <section class="spaced">
             <header>
                 <h1>About Me</h1>
             </header>
-
+            
             <div class="about_me_page medium_shadow">
                 <img class="profile_pic" src="https://placehold.co/200" alt="placeholder">
                 <div class="subtitle">
@@ -60,7 +61,7 @@
                         <h2>Placeholder</h2>
                     </div>
                 </a>
-
+                
                 <a href="https://google.com" target="_blank" class="project">
                     <div class="project_image i1"></div>
                     <div class="project_label">
@@ -75,46 +76,57 @@
             <header>
                 <h1>Message Me</h1>
             </header>
-
+            
             <div class="message_me_page">
                 <form class="table_parent medium_shadow">
                     <table class="form_table">
                         <tr>
                             <td>Nama</td>
                             <td>:</td>
-                            <td><input class="len he" type="text" required></td>
+                            <td><input class="len he" id="name" type="text"></td>
                         </tr>
-
+                        
                         <tr>
                             <td>Tanggal Lahir </td>
                             <td>:</td>
-                            <td><input class="len he" type="date" required></td>
+                            <td><input class="len he" id="birth_date" type="date"></td>
                         </tr>
-
+                        
                         <tr>
                             <td>Jenis Kelamin </td>
                             <td>:</td>
                             <td>
                                 <label for="male">Laki-laki</label>
-                                <input type="radio" name="gender" id="male" value="male" required>
+                                <input type="radio" name="gender" id="male" value="laki-laki" checked>
                                 <label for="female">Perempuan</label>
-                                <input type="radio" name="gender" id="female" value="female">
+                                <input type="radio" name="gender" id="female" value="perempuan">
                             </td>
                         </tr>
 
                         <tr>
                             <td>Pesan </td>
                             <td>:</td>
-                            <td><textarea name="message" class="len" id="message" cols="30" rows="10" required></textarea></td>
+                            <td><textarea name="message" class="len" id="message" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                         </tr>
                     </table>
 
-                    <input class="submit" type="submit"></button>
+                    <button id="submit" type="button">Submit</button>
                 </form>
+
+                <div id="regist_box" class="medium_shadow">
+                    <div></div>
+                    <span id="name_span" class="sp"></span>
+                    <span id="date_span" class="sp"></span>
+                    <span id="gender_span" class="sp"></span>
+                    <span id="msg_span" class="sp"></span>
+                </div>
             </div>
         </section>
     </main>
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>

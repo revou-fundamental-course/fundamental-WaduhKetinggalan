@@ -188,6 +188,7 @@ h1 {
 
 /* Message Me */
 .message_me_page {
+    display: flex;
     margin-top: 20px;
     font-size: 15px;
     width: 100%;
@@ -201,7 +202,7 @@ h1 {
     height: 30px;
 }
 
-.submit {
+#submit {
     width: 100%;
     height: 30px;
     font-size: 18px;
@@ -213,7 +214,22 @@ h1 {
     flex-direction: column;
     border-radius: 8px;
     padding: 20px;
-    width: 50%;
+    width: 49%;
+}
+
+#regist_box {
+    display: none;
+    flex-direction: column;
+    width: 49%;
+    height: calc(30px*2 + 15.5em);
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.sp {
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: larger;
 }
 
 
@@ -234,7 +250,10 @@ h1 {
     .about_me_page > .subtitle > p {margin-left: 2px; margin-right: 2px;}
     .about_me_page {justify-content: space-between;}
     
-    /* My Projects and Form*/
+    /* My Projects and Form */
     .project {width: 130px; margin-right: 10px;}
     .table_parent {width: 250px;}
+    .message_me_page {flex-direction: column;}
+    .sp {font-size: 15px;}
+    #regist_box {width: 100%; margin-left: 0px; margin-top: 20px;}
 }
