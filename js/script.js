@@ -33,7 +33,7 @@ function init() {
 }
 
 function setBanner(index) {
-    let urls = ["https://picsum.photos/seed/picsum/1080/1920", "https://picsum.photos/seed/picsum1/1080/1920", "https://picsum.photos/seed/picsum2/1080/1920"];
+    let urls = ["https://picsum.photos/seed/picsum/1920/1080", "https://picsum.photos/seed/picsum1/1920/1080", "https://picsum.photos/seed/picsum2/1920/1080"];
     document.querySelector(".banner").style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0), black), url("'+urls[index]+'")';
 }
 
