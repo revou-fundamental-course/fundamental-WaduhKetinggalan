@@ -215,3 +215,26 @@ h1 {
     padding: 20px;
     width: 50%;
 }
+
+
+/* Responsive Layouting */
+@media only screen and (max-width:425px) {
+    /* Global */
+    h1 {font-size: 2em;}
+    h2 {font-size: 10px;}
+    p {font-size: 0.7em;}
+    .spaced {padding: 5px;}
+
+    /* Header */
+    .page_header {flex-direction: column;}
+    .navbar > a {padding-left: 5px; padding-right: 5px;}
+    .logo {margin-bottom: 5px;}
+
+    /* About Me*/
+    .about_me_page > .subtitle > p {margin-left: 2px; margin-right: 2px;}
+    .about_me_page {justify-content: space-between;}
+    
+    /* My Projects and Form*/
+    .project {width: 130px; margin-right: 10px;}
+    .table_parent {width: 250px;}
+}
