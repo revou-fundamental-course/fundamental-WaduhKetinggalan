@@ -32,5 +32,23 @@ function init() {
     }
 }
 
+function setBanner(index) {
+    let urls = ["https://picsum.photos/seed/picsum/1080/1920", "https://picsum.photos/seed/picsum1/1080/1920", "https://picsum.photos/seed/picsum2/1080/1920"];
+    document.querySelector(".banner").style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0), black), url("'+urls[index]+'")';
+}
+
+function nextIndex(index) {
+    if (index >= 2) {
+        return 0
+    } else {
+        return index + 1
+    }
+}
+
+var index = 0
 init()
+setInterval(function() {
+    index = nextIndex(index)
+    setBanner(index);
+}, 3500)
 document.getElementById("submit").addEventListener("click", submit);
