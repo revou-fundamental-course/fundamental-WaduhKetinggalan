@@ -51,4 +51,4 @@ setInterval(function() {
     index = nextIndex(index)
     setBanner(index);
 }, 3500)
-document.getElementById("submit").addEventListener("click", submit);
+document.getElementById("submit").addEventListener("click", submit); //
